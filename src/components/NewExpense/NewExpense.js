@@ -4,7 +4,6 @@ import ExpenseForm from "./ExpenseForm";
 const NewExpense = props => {
 
   const onNewExpenseAddHandler = formData => {
-    console.log('inside expense add : ', formData);
     const newExpenseData = {
       ...formData,
       id: Math.random().toString()
