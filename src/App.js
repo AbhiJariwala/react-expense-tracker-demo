@@ -10,9 +10,13 @@ const App = () => {
     {id: 'e4', title: 'New Refrigerator', amount: 499, date: new Date(2019, 11, 5)},
   ];
 
+  const onNewExpenseAddHandler = expenseData => {
+    console.log('inside app js ', expenseData);
+  }
+
   return (
     <div className="App">
-      <NewExpense/>
+      <NewExpense onSave={onNewExpenseAddHandler}/>
       <Expenses expenses={expenses}/>
     </div>
   );
